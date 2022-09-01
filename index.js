@@ -20,15 +20,17 @@ function handleComment(comment) {
 console.log('Before DOM loads')
 
 //Getting the API that will generate the bible verse need 
-    let adviceField = document.getElementById('verse')
-    fetch(`https://bible-api.com/john%203:16`)
+   let bibleVerse = document.getElementById('verse')
+    fetch(`https://bible-api.com/romans%2012:1-2,5-7,9,13:1-9&10`)
   .then((response) => response.json())
-  .then((verse) => console.log(verse))
+  .then((verse) => console.log(verse, showVerse))
 
 
-  function showVerse(verse){
+  /*function showVerse(verse){
+      let p = document.createElement('p')
+      p.textContent = text
+      console.log(p)
+     document.querySelector("#text").appendChild(p)
+    
 
-
-  }
-   
-  
+  }*/
