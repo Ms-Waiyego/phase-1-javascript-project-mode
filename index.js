@@ -20,17 +20,6 @@ function handleComment(comment) {
 console.log('Before DOM loads')
 
 //Getting the API that will generate the bible verse need 
-   let bibleVerse = document.getElementById('verse')
-    fetch(`https://bible-api.com/romans%2012:1-2,5-7,9,13:1-9&10`)
-  .then((response) => response.json())
-  .then((verse) => console.log(verse, showVerse))
-
-
-  /*function showVerse(verse){
-      let p = document.createElement('p')
-      p.textContent = text
-      console.log(p)
-     document.querySelector("#text").appendChild(p)
-    
-
-  }*/
+fetch(`https://bible-api.com/romans+12:1-2`)
+.then((response)=>response.json)
+.then((verse)=>console.log(verse))
