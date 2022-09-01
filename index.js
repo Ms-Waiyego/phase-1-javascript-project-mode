@@ -1,5 +1,5 @@
 //Creating a submit button
-//This button lets one submit thier comment on the verse given
+//This button enables one to submit their comment on the verse given
 
 document.addEventListener("DOMContentLoaded", () => {
 const form = document.querySelector('form')
@@ -27,9 +27,7 @@ console.log('Before DOM loads')
 
 
   function showVerse(verse){
-    const bibleVerse =document.querySelector('#vesre')
-    const versePlace =document.createElement("p")
-    document.appendChild('p')
+
 
   }
    
