@@ -13,7 +13,6 @@ function handleComment(comment) {
   p.textContent = comment
   console.log(p)
  document.querySelector("#comment").appendChild(p)
-
 }
   console.log ("After DOM loaded")
 });
@@ -26,9 +25,7 @@ function getverse(verse) {
   .then((bibleverse)=>{ console.log(bibleverse)
   const parentDiv = document.getElementById("verse")
   Array.from(bibleverse).forEach((verse) =>{
-    bibleverse += `
-     <p>${verse.text}</p>
-    `
+    bibleverse += `<p>${verse.text}</p>`
    })
    document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text)
   } )
