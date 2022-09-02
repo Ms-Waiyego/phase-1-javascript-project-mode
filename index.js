@@ -23,3 +23,6 @@ fetch(`https://bible-api.com/john%203:16`)
 .then((data)=>{
   document.getElementById("verse").innerHTML= data
 })
+.catch((error)=>{
+  console.log(error)
+})
