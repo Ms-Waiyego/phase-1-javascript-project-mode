@@ -13,17 +13,26 @@ function handleComment(comment) {
   p.textContent = comment
   console.log(p)
  document.querySelector("#comment").appendChild(p)
- 
- document.getElementById('getverse').addEventListener('click', getverse)
+
 }
   console.log ("After DOM loaded")
 });
 console.log('Before DOM loads')
-fetch(`https://bible-api.com/john%203:16`)
-.then((response)=>{ return response.json()})
-.then((data)=>{
-  document.getElementById("verse").innerHTML= data
-})
-.catch((error)=>{
-  console.log(error)
-})
+document.getElementById('getverse').addEventListener('click', getverse)
+function getverse(verse) {
+  fetch(`https://bible-api.com/romans+12:1-2`,{
+   method : "GET",})
+  .then((response)=> response.json())
+  .then((bibleverse)=>{ console.log(bibleverse)
+  const parentDiv = document.getElementById("verse")
+  Array.from(bibleverse).forEach((verse) =>{
+    bibleverse += `
+     <p>${verse.text}</p>
+    `
+   })
+   document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text)
+  } )
+  }
+  
+
+
