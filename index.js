@@ -14,6 +14,7 @@ function handleComment(comment) {
   console.log(p)
  document.querySelector("#comment").appendChild(p)
  
+ 
 }
   console.log ("After DOM loaded")
 });
