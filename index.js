@@ -18,8 +18,6 @@ function handleComment(comment) {
   console.log ("After DOM loaded")
 });
 console.log('Before DOM loads')
-
-
 fetch(`https://bible-api.com/john%203:16`)
 .then((response)=>{ return response.json()})
 .then((data)=>{
