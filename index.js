@@ -13,13 +13,16 @@ function handleComment(comment) {
   p.textContent = comment
   console.log(p)
  document.querySelector("#comment").appendChild(p)
-
+ 
 }
   console.log ("After DOM loaded")
 });
 console.log('Before DOM loads')
 
-//Getting the API that will generate the bible verse need 
-fetch(`https://bible-api.com/romans+12:1-2`)
-.then((response)=>response.json)
-.then((verse)=>console.log(verse))
+
+fetch(`https://bible-api.com/john%203:16`)
+.then((response)=>{ return response.json()})
+.then((data)=>{
+  document.getElementById("verse").innerHTML= data
+
+})
