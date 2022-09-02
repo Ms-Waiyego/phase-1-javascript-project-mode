@@ -14,7 +14,7 @@ function handleComment(comment) {
   console.log(p)
  document.querySelector("#comment").appendChild(p)
  
- 
+ document.getElementById('getverse').addEventListener('click', getverse)
 }
   console.log ("After DOM loaded")
 });
