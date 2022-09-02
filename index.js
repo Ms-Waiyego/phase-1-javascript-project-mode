@@ -22,5 +22,4 @@ fetch(`https://bible-api.com/john%203:16`)
 .then((response)=>{ return response.json()})
 .then((data)=>{
   document.getElementById("verse").innerHTML= data
-
 })
