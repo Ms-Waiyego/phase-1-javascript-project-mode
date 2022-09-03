@@ -23,3 +23,7 @@ body{
     border-color: blueviolet;
     height: 600px;
    }
+   #comment_section{
+    padding: 20px;
+    height: 30px;
+   }
